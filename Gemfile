@@ -26,6 +26,21 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "bootstrap", "~> 5.2"
+# Esta linha adiciona a gem Bootstrap ao projeto. O Bootstrap é um framework front-end que fornece estilos predefinidos e componentes para facilitar a criação de interfaces de usuário responsivas e atraentes. A versão especificada é a 5.2.
+
+gem "autoprefixer-rails"
+# Essa gem é usada para adicionar automaticamente os prefixos necessários para propriedades CSS que precisam de prefixos específicos para diferentes navegadores. Isso é útil para garantir a compatibilidade do CSS com uma variedade de navegadores.
+
+gem "font-awesome-sass", "~> 6.1"
+# Esta linha adiciona a gem Font Awesome SASS ao projeto. Font Awesome é uma biblioteca de ícones e ícones personalizáveis que podem ser usados no projeto. A versão especificada é a 6.1.
+
+gem "simple_form"
+# Essa gem simplifica a criação de formulários no Ruby on Rails, oferecendo uma maneira mais limpa e eficiente de definir formulários com menos código.
+
+gem "sassc-rails"
+# Essa gem integra o SASS (Syntactically Awesome Style Sheets) com o pipeline de assets do Rails, permitindo o uso do SASS para escrever estilos de maneira mais organizada e dinâmica.
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -61,4 +76,3 @@ group :development do
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
-
