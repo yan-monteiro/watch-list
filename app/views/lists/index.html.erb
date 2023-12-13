@@ -1,1 +1,26 @@
-Oi
+<div class="container">
+  <div class="new_list text-center">
+    <h1>THIS IS A WATCH LIST</h1>
+    <h3>Create you own movie lists</h3>
+    <p><%= link_to "Create new list", new_list_path, class: "card-tag" %></p>
+  </div>
+  
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card">
+        <div class="card-info">
+          <span class="card-grad--name"><strong><%= list.name %></strong></span>
+          <span><small><em class="text-muted"><%= distance_of_time_in_words_to_now(list.created_at) %> ago</em></small></span>
+        </div>
+
+        <div class="card-heading">
+          <%= link_to list.category, list_path(list), target: "_blank", class: "card-heading a:link" %>
+        </div>
+
+        <div class="card-tags">
+          <%= link_to "Go to list", list_path(list), target: "_blank", class: "card-tag" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

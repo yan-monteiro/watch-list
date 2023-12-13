@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="list-header">
+        <h1><%= @list.name %></h1>
+        <%= link_to "Remove list", list_path(@list), class: "btn btn-outline-warning", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
+    </div>
+</div>
+<%# ------------------------------ %>
+    <%= simple_form_for [@list, @bookmark], html: { class: "review-form" } do |f| %>
+      <div class="form-inputs">
+        <%= f.association :movie %>
+        <%= f.input :comment, placeholder: "Enter a comment about the movie"%>
+        <%= f.submit "Add movie", class: "btn btn-success" %>
+      </div>
+    <% end -%>
+<%# ------------------------------ %>
+  <h1>Movies that you added</h1>
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="card">
+          <h3><%= bookmark.movie.title %></h3>
+          <div class="image-container">
+          <%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title, class: "movie-img rounded-top" %>
+          </div>
+          <small class="text-muted"><%= bookmark.movie.overview %></small>
+          <p><strong>Comment: </strong><%= bookmark.comment %></p>
+          <p><%= link_to 'Remove movie', bookmark_path(bookmark), class:"btn btn-outline-danger", data: {turbo_method: "delete", turbo_confirm: "Are you sure?"} %></p>
+        </div>
+    <% end %>
+
+  <hr>
+
+<h1>Reviews List</h1>
+<hr>
+  <div class="reviews">
+        <% @list.reviews.each do |review| %>
+          <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
+          <p class="mb-0"><%= review.content %></p>
+        <hr>
+      <% end %>
+  </div>
+
+    <div class="review-container">
+      <div class="review-header">
+        Leave your review
+      </div>
+      <%= simple_form_for [@list, @review] do |f| %>
+        <%= f.input :content, as: :text, input_html: { placeholder: "Write your review", class: 'form-control' } %>
+        <%= f.submit 'Send', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+
+    <%= link_to "Back to home", lists_path %>
+</div>
