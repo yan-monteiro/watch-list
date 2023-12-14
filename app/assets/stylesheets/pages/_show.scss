@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700');
+
+$text-color:#010b26;
+
+* {
+	transition: 300ms;
+}
+
+.intro {
+	text-align:center;
+}
+
+ul {
+	list-style-type:none;
+}
+
+// h1,h2,h3,h4,h5,p {
+// 	font-weight: 400;
+// }
+
+a {
+	text-decoration:none;
+	color:inherit;
+}
+
+a:hover {
+	color:#BBAB8C;
+}
+
+.movie-card {
+	background: #ffffff;
+	box-shadow: 0px 6px 18px rgba(0,0,0,.1);
+	width: 100%;
+	max-width: 315px;
+	margin: 2em;
+	border-radius: 10px;
+	display:inline-block;
+}
+
+.movie-header {
+	padding:0;
+	margin: 0;
+	height: 367px;
+	width: 100%;
+	display: block;
+	border-top-left-radius: 10px;
+	border-top-right-radius:10px;
+}
+
+.movie-card:hover {
+	transform:scale(1.03);
+	box-shadow: 0px 10px 25px rgba(0,0,0,.08);
+}
+
+.movie-content {
+  padding: 110px 18px; /* Ajuste o padding conforme necessário */
+  margin: 0;
+  height: 300px; /* Defina a altura desejada para os cards */
+  overflow: hidden; /* Para garantir que o conteúdo não extrapole a altura */
+}
+
+
+.movie-content-header, .movie-info {
+	display: table;
+	width: 100%;
+}
+
+.movie-title {
+	font-size: 24px;
+	margin: 0;
+	display: table-cell;
+}
+
+.movie-info {
+	margin-top: 1em;
+}
+
+.info-section {
+	display: table-cell;
+	text-transform: uppercase;
+	text-align:center;
+}
+
+.info-section:first-of-type {
+	text-align:left;
+}
+
+.info-section:last-of-type {
+	text-align:right;
+}
+
+.info-section label {
+	display: block;
+	color: rgba(0,0,0,.5);
+	margin-bottom: .5em;
+	font-size: 9px;
+}
+
+.info-section span {
+	font-weight: 700;
+	font-size: 11px;
+}
+
+@media screen and (max-width: 500px) {
+	.movie-card {
+		width: 95%;
+		max-width: 95%;
+		margin: 1em;
+		display: block;
+	}
+
+	.container {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.card-reviews {
+  background-color: #BBAB8C;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-reviews small {
+  color: #888;
+}
