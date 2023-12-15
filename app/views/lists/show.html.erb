@@ -49,7 +49,6 @@
   <div class="reviews_list text-center" style="margin-top: 50px;">
     <h1>Reviews List</h1>
   </div>
-  <hr>
 
   <div class="reviews text-center">
     <% @list.reviews.each do |review| %>
@@ -62,7 +61,7 @@
 
   <div class="review-container">
     <%= simple_form_for [@list, @review] do |f| %>
-      <%= f.input :content, as: :text, input_html: { placeholder: "Write your review", class: 'form-control' }, label: false %>
+      <%= f.input :content, as: :text,  input_html: { placeholder: "Write your review", class: 'form-control' }, label: false %>
       <div class="text-center">
         <%= f.submit 'ADD REVIEW', class: "card-tag" %>
       </div>

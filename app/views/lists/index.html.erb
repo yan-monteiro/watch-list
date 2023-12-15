@@ -1,10 +1,10 @@
 <div class="container">
-  <div class="new_list text-center">
+  <div class="new_list text-center" style="margin-top: 30px">
     <h1>THIS IS A WATCH LIST</h1>
     <h3>Create you own movie lists</h3>
     <p><%= link_to "Create new list", new_list_path, class: "card-tag" %></p>
   </div>
-  
+
   <div class="cards">
     <% @lists.each do |list| %>
       <div class="card">
@@ -14,11 +14,11 @@
         </div>
 
         <div class="card-heading">
-          <%= link_to list.category, list_path(list), target: "_blank", class: "card-heading a:link" %>
+          <%= link_to list.category, list_path(list), class: "card-heading a:link" %>
         </div>
 
         <div class="card-tags">
-          <%= link_to "Go to list", list_path(list), target: "_blank", class: "card-tag" %>
+          <%= link_to "Go to list", list_path(list), class: "card-tag" %>
         </div>
       </div>
     <% end %>
