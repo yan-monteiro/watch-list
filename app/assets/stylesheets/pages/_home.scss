@@ -91,12 +91,17 @@ h1,h3 {
 }
 
 .card-tag {
-  color:#BBAB8C;
-  padding: 5px 12px;
+  color:#BBAB8C !important;
+  padding: 5px 30px;
   border: 2px solid hsl(30, 40%, 70%);
   border-radius: 100px;
   text-transform: uppercase;
   margin-right: 10px;
   font-size: .9em;
   text-decoration: none;
+  height: 100%;
+}
+
+.card-tag:hover {
+  border-color: #25221c  /* Muda a cor da borda para vermelho quando o mouse passa sobre o botão */
 }
