@@ -57,6 +57,7 @@ a:hover {
   margin: 0;
   height: 300px; /* Defina a altura desejada para os cards */
   overflow: hidden; /* Para garantir que o conteúdo não extrapole a altura */
+  text-align: center !important;
 }
 
 
@@ -86,7 +87,7 @@ a:hover {
 }
 
 .info-section:last-of-type {
-	text-align:right;
+	text-align:center;
 }
 
 .info-section label {
