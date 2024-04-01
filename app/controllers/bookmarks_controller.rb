@@ -7,9 +7,10 @@ class BookmarksController < ApplicationController
     if @bookmark.save
       redirect_to list_path(@list)
     else
-      render "lists/show", :new, status: :unprocessable_entity
+      render "lists/show", :new
     end
   end
+
 
   def destroy
     @bookmark = Bookmark.find(params[:id])

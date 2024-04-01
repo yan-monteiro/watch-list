@@ -6,9 +6,10 @@
   box-sizing: border-box;
 }
 
-h1,h3 {
+h1, h3 {
   font-family: "Work Sans", "Helvetica", sans-serif;
 }
+
 
 .cards {
   display: flex;
@@ -103,5 +104,6 @@ h1,h3 {
 }
 
 .card-tag:hover {
-  border-color: #25221c  /* Muda a cor da borda para vermelho quando o mouse passa sobre o botão */
+  background-color: #000000; /* Muda a cor de fundo para branco quando o mouse passa sobre o botão */
+  color: #000000; /* Muda a cor do texto para preto quando o mouse passa sobre o botão */
 }

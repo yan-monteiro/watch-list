@@ -45,29 +45,6 @@
   <% end -%>
 </div>
 
-<div class="container">
-  <div class="reviews_list text-center" style="margin-top: 50px;">
-    <h1>Reviews List</h1>
-  </div>
-
-  <div class="reviews text-center">
-    <% @list.reviews.each do |review| %>
-      <div class="card-reviews my-3 p-3">
-        <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
-        <p class="mb-0"><%= review.content %></p>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="review-container">
-    <%= simple_form_for [@list, @review] do |f| %>
-      <%= f.input :content, as: :text,  input_html: { placeholder: "Write your review", class: 'form-control' }, label: false %>
-      <div class="text-center">
-        <%= f.submit 'ADD REVIEW', class: "card-tag" %>
-      </div>
-    <% end %>
-  </div>
-
   <div class="container">
     <div class="d-flex justify-content-between align-items-center" style="margin-top: 50px;">
       <%= link_to "Back to home", lists_path, class: "card-tag" %>
